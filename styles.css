@@ -200,3 +200,15 @@ button { font: inherit; }
   .statement, .research-section, .publications-section, .people-section, .news-section, .approach-section, .join-section { padding-top: 5.5rem; padding-bottom: 5.5rem; }
   .people-placeholder { min-height: 360px; }
 }
+</>css
+.hero-image-section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
