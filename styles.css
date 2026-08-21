@@ -243,3 +243,28 @@ button { font: inherit; }
   position: relative;
   z-index: 3;
 }
+.hero-image-section {
+  position: relative;
+}
+
+.hero-click {
+  position: absolute;
+  display: block;
+  z-index: 10;
+}
+
+/* Explore our research */
+.hero-click-research {
+  left: 8%;
+  top: 72%;
+  width: 17%;
+  height: 9%;
+}
+
+/* Work with us */
+.hero-click-join {
+  left: 27%;
+  top: 72%;
+  width: 12%;
+  height: 9%;
+}
