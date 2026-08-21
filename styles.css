@@ -225,3 +225,21 @@ button { font: inherit; }
     border-radius: 10px;
   }
 }
+.hero-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-visual {
+  position: relative;
+  z-index: 1;
+}
+
+.orb {
+  pointer-events: none;
+}
+
+.button {
+  position: relative;
+  z-index: 3;
+}
