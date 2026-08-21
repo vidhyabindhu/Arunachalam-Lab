@@ -203,12 +203,25 @@ button { font: inherit; }
 </>css
 .hero-image-section {
   width: 100%;
-  margin: 0;
-  padding: 0;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 24px 32px;
+  box-sizing: border-box;
 }
 
 .hero-image {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 18px;
+}
+
+@media (max-width: 768px) {
+  .hero-image-section {
+    padding: 12px;
+  }
+
+  .hero-image {
+    border-radius: 10px;
+  }
 }
