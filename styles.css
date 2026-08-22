@@ -246,7 +246,7 @@ button { font: inherit; }
 }
 
 .hero-lede {
-  max-width: 610px;
+  max-width: 630px;
   margin-top: 2rem;
 }
 
@@ -263,32 +263,24 @@ button { font: inherit; }
 
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-end;
 
   background: transparent;
   border: 0;
   box-shadow: none;
 
-  /* Bring infographic slightly closer to the text */
-  transform: translate(-15px, -10px);
-}
-
-.hero-visual::before,
-.hero-visual::after {
-  display: none;
-  content: none;
+  transform: translate(10px, -10px);
 }
 
 .hero-visual-image {
   display: block;
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   height: auto;
 
   object-fit: contain;
-
-  /* No border or mask needed for the light image */
   border-radius: 0;
+
   -webkit-mask-image: none;
   mask-image: none;
 }
