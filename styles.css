@@ -201,59 +201,95 @@ button { font: inherit; }
   .people-placeholder { min-height: 360px; }
 }
 
-/* ===== HERO LAYOUT ===== */
+/* ===== HERO FINAL LAYOUT ===== */
 
 .hero {
-  width: calc(100% - 80px);
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 3.5rem 0 4.5rem;
+  width: 100%;
+  max-width: none;
+  min-height: auto;
+
+  margin: 0;
+  padding: 4rem 4vw 5rem;
 
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-  gap: 2rem;
-  align-items: start;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 2.5rem;
+  align-items: center;
+
+  background: var(--paper);
 }
+
+
+/* LEFT SIDE */
 
 .hero-copy {
   width: 100%;
-  max-width: 620px;
+  max-width: 650px;
+
+  /* IMPORTANT: removes the large padding from the original hero */
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   justify-self: start;
 }
 
+
 .hero-copy h1 {
-  font-size: clamp(3.4rem, 4.7vw, 5.4rem);
-  line-height: 0.98;
-  letter-spacing: -0.045em;
-  max-width: 620px;
+  max-width: 650px;
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: clamp(3.5rem, 4.5vw, 5.2rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
 }
+
+
+.hero-lede {
+  max-width: 610px;
+  margin-top: 2rem;
+}
+
+
+/* RIGHT SIDE */
 
 .hero-visual {
   width: 100%;
-  min-width: 0;
-  min-height: 0 !important;
-  padding: 2.5rem 0 0 0 !important;
+
+  min-height: 0;
+  padding: 0;
+
+  position: relative;
+  overflow: visible;
 
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
 
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
+
 
 .hero-visual::before,
 .hero-visual::after {
-  display: none !important;
-  content: none !important;
+  display: none;
+  content: none;
 }
+
 
 .hero-visual-image {
   display: block;
+
   width: 100%;
-  max-width: 660px;
+  max-width: 650px;
   height: auto;
+
   object-fit: contain;
   border-radius: 8px;
 }
@@ -261,29 +297,47 @@ button { font: inherit; }
 
 /* ===== RESPONSIVE HERO ===== */
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
+
   .hero {
-    width: calc(100% - 40px);
     grid-template-columns: 1fr;
-    gap: 2.5rem;
-    padding: 2.5rem 0 3rem;
+    gap: 3rem;
+    padding: 3rem 5vw 4rem;
   }
 
   .hero-copy {
     max-width: 700px;
+    padding: 0;
   }
 
   .hero-copy h1 {
-    font-size: clamp(3rem, 9vw, 4.5rem);
     max-width: 700px;
+    font-size: clamp(3rem, 8vw, 4.8rem);
   }
 
   .hero-visual {
+    min-height: 0;
     justify-content: center;
-    padding-top: 0 !important;
   }
 
   .hero-visual-image {
     max-width: 700px;
   }
+}
+
+
+@media (max-width: 600px) {
+
+  .hero {
+    padding: 2.5rem 5vw 3.5rem;
+  }
+
+  .hero-copy {
+    padding: 0;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.8rem, 13vw, 4.2rem);
+  }
+
 }
