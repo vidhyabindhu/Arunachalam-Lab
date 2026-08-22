@@ -269,8 +269,8 @@ button { font: inherit; }
   border: 0;
   box-shadow: none;
 
-  /* Pull infographic toward headline and slightly upward */
-  transform: translate(-20px, -20px);
+  /* Bring infographic slightly closer to the text */
+  transform: translate(-15px, -10px);
 }
 
 .hero-visual::before,
@@ -281,30 +281,16 @@ button { font: inherit; }
 
 .hero-visual-image {
   display: block;
-
   width: 100%;
-  max-width: 710px;
+  max-width: 720px;
   height: auto;
 
   object-fit: contain;
-  border-radius: 8px;
 
-  /* Blend left edge of dark infographic into cream background */
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    rgba(0, 0, 0, 0.45) 4%,
-    black 11%,
-    black 100%
-  );
-
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    rgba(0, 0, 0, 0.45) 4%,
-    black 11%,
-    black 100%
-  );
+  /* No border or mask needed for the light image */
+  border-radius: 0;
+  -webkit-mask-image: none;
+  mask-image: none;
 }
 
 
