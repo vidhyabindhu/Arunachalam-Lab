@@ -201,18 +201,18 @@ button { font: inherit; }
   .people-placeholder { min-height: 360px; }
 }
 
-/* ===== HERO SIZE + PROPORTION FIX ===== */
+/* ===== HERO LAYOUT ===== */
 
 .hero {
-  width: 100%;
+  width: calc(100% - 80px);
   max-width: 1500px;
   margin: 0 auto;
-  padding: 3rem 2rem 4rem;
+  padding: 3.5rem 0 4.5rem;
 
   display: grid;
-  grid-template-columns: 48% 52%;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
   gap: 2rem;
-  align-items: center;
+  align-items: start;
 }
 
 .hero-copy {
@@ -221,44 +221,69 @@ button { font: inherit; }
   justify-self: start;
 }
 
+.hero-copy h1 {
+  font-size: clamp(3.4rem, 4.7vw, 5.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  max-width: 620px;
+}
+
 .hero-visual {
   width: 100%;
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  padding: 0 !important;
+  min-width: 0;
   min-height: 0 !important;
+  padding: 2.5rem 0 0 0 !important;
 
   display: flex;
+  align-items: flex-start;
   justify-content: flex-start;
-  align-items: center;
+
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.hero-visual::before,
+.hero-visual::after {
+  display: none !important;
+  content: none !important;
 }
 
 .hero-visual-image {
   display: block;
   width: 100%;
-  max-width: 590px;
+  max-width: 660px;
   height: auto;
   object-fit: contain;
-  border-radius: 14px;
+  border-radius: 8px;
 }
+
+
+/* ===== RESPONSIVE HERO ===== */
 
 @media (max-width: 900px) {
   .hero {
+    width: calc(100% - 40px);
     grid-template-columns: 1fr;
-    padding: 2.5rem 1.5rem 3rem;
-    gap: 2rem;
+    gap: 2.5rem;
+    padding: 2.5rem 0 3rem;
   }
 
   .hero-copy {
-    max-width: 100%;
+    max-width: 700px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(3rem, 9vw, 4.5rem);
+    max-width: 700px;
   }
 
   .hero-visual {
     justify-content: center;
+    padding-top: 0 !important;
   }
 
   .hero-visual-image {
-    max-width: 620px;
+    max-width: 700px;
   }
 }
