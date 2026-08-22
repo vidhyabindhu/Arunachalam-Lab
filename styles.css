@@ -200,92 +200,31 @@ button { font: inherit; }
   .statement, .research-section, .publications-section, .people-section, .news-section, .approach-section, .join-section { padding-top: 5.5rem; padding-bottom: 5.5rem; }
   .people-placeholder { min-height: 360px; }
 }
-</>css
-.hero-image-section {
-  width: 100%;
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 24px 32px;
-  box-sizing: border-box;
-}
-
-.hero-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 18px;
-}
-
-@media (max-width: 768px) {
-  .hero-image-section {
-    padding: 12px;
-  }
-
-  .hero-image {
-    border-radius: 10px;
-  }
-}
-.hero-copy {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-visual {
-  position: relative;
-  z-index: 1;
-}
-
-.orb {
-  pointer-events: none;
-}
-
-.button {
-  position: relative;
-  z-index: 3;
-}
-.hero-image-section {
-  position: relative;
-}
-
-.hero-click {
-  position: absolute;
-  display: block;
-  z-index: 10;
-}
-
-/* Explore our research */
-.hero-click-research {
-  left: 8%;
-  top: 72%;
-  width: 17%;
-  height: 9%;
-}
-
-/* Work with us */
-.hero-click-join {
-  left: 27%;
-  top: 72%;
-  width: 12%;
-  height: 9%;
-}
+/* ===== HERO FINAL LAYOUT ===== */
 
 .hero {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 3.5rem 2.5rem 4.5rem;
+
   display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
+  grid-template-columns: minmax(420px, 0.9fr) minmax(600px, 1.25fr);
+  gap: 2.5rem;
   align-items: center;
-  gap: 3rem;
-  padding: 4rem 5%;
 }
 
 .hero-copy {
-  position: relative;
-  z-index: 2;
+  width: 100%;
+  max-width: 620px;
+  justify-self: start;
 }
 
 .hero-visual {
+  width: 100%;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
 }
 
 .hero-visual-image {
@@ -296,21 +235,38 @@ button { font: inherit; }
   border-radius: 18px;
 }
 
-.hero-actions {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  margin-top: 2rem;
+/* Tablets / smaller screens */
+
+@media (max-width: 1100px) {
+  .hero {
+    grid-template-columns: 1fr 1.15fr;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .hero-copy {
+    max-width: 540px;
+  }
 }
 
-@media (max-width: 900px) {
+/* Phones */
+
+@media (max-width: 800px) {
   .hero {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    padding: 2.5rem 1.25rem 3rem;
+    gap: 2.5rem;
+  }
+
+  .hero-copy {
+    max-width: 650px;
+  }
+
+  .hero-visual {
+    justify-content: center;
   }
 
   .hero-visual-image {
-    max-width: 100%;
+    max-width: 700px;
   }
 }
-
