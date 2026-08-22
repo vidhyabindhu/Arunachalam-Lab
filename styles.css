@@ -365,12 +365,12 @@ button { font: inherit; }
   padding: 1.6rem 0;
   border-top: 1px solid rgba(255,255,255,.16);
   align-items: baseline;
-  position: relative;
 }
 
-.approach-list .approach-node {
+.approach-list > div > span {
   color: #e0b76f;
-  font-size: 1.1rem;
-  line-height: 1;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: normal;
   letter-spacing: 0;
 }
