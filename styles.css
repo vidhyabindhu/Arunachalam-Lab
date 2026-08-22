@@ -136,7 +136,12 @@ button { font: inherit; }
 .section-kicker.light { color: #e0b76f; }
 .approach-list > div { display: grid; grid-template-columns: 55px 1fr; gap: 1rem; padding: 1.6rem 0; border-top: 1px solid rgba(255,255,255,.16); }
 .approach-list > div:last-child { border-bottom: 1px solid rgba(255,255,255,.16); }
-.approach-list span { color: #e0b76f; font-size: .7rem; font-weight: 700; letter-spacing: .14em; }
+.approach-list span { 
+  color: #e0b76f; 
+  font-size: .9rem; 
+  font-weight: 700; 
+  letter-spacing: .14em; 
+}
 .approach-list strong { font: 500 1.35rem/1.2 "Manrope",sans-serif; }
 .approach-list small { grid-column: 2; color: rgba(255,255,255,.55); font-size: .9rem; }
 
