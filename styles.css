@@ -201,17 +201,17 @@ button { font: inherit; }
   .people-placeholder { min-height: 360px; }
 }
 
-/* ===== HERO CLEAN LAYOUT ===== */
+/* ===== HERO SIZE + PROPORTION FIX ===== */
 
 .hero {
   width: 100%;
-  max-width: 1450px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 3rem 2rem 4rem;
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 48% 52%;
+  gap: 2rem;
   align-items: center;
 }
 
@@ -223,38 +223,42 @@ button { font: inherit; }
 
 .hero-visual {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: none !important;
-  border: none !important;
+  background: transparent !important;
+  border: 0 !important;
   box-shadow: none !important;
   padding: 0 !important;
   min-height: 0 !important;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .hero-visual-image {
-  width: 100%;
-  max-width: 620px;
-  height: auto;
   display: block;
-  border-radius: 16px;
+  width: 100%;
+  max-width: 590px;
+  height: auto;
   object-fit: contain;
+  border-radius: 14px;
 }
 
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
+    padding: 2.5rem 1.5rem 3rem;
     gap: 2rem;
-    padding: 2.5rem 1.25rem 3rem;
   }
 
   .hero-copy {
-    max-width: 650px;
+    max-width: 100%;
+  }
+
+  .hero-visual {
+    justify-content: center;
   }
 
   .hero-visual-image {
-    max-width: 650px;
+    max-width: 620px;
   }
 }
