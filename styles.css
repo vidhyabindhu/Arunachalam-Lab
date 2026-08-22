@@ -269,13 +269,13 @@ button { font: inherit; }
   border: 0;
   box-shadow: none;
 
-  transform: translate(10px, -10px);
+  transform: translate(35px, -10px);
 }
 
 .hero-visual-image {
   display: block;
-  width: 100%;
-  max-width: 900px;
+  width: 108%;
+  max-width: 960px;
   height: auto;
 
   object-fit: contain;
