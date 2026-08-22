@@ -359,33 +359,18 @@ button { font: inherit; }
 /* Connected approach pathway */
 
 .approach-list > div {
-  position: relative;
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  gap: 1rem;
+  padding: 1.6rem 0;
+  border-top: 1px solid rgba(255,255,255,.16);
   align-items: baseline;
+  position: relative;
 }
 
 .approach-list .approach-node {
-  display: block;
-  width: 12px;
-  height: 12px;
-  min-width: 12px;
-  min-height: 12px;
-  border-radius: 50%;
-  background-color: #e0b76f;
-  justify-self: start;
-  align-self: start;
-  margin-top: 5px;
-  padding: 0;
-  font-size: 0;
+  color: #e0b76f;
+  font-size: 1.1rem;
+  line-height: 1;
   letter-spacing: 0;
-}
-
-/* connecting line between nodes */
-.approach-list > div:not(:last-child) .approach-node::after {
-  content: "";
-  position: absolute;
-  left: 5.5px;
-  top: 12px;
-  width: 1px;
-  height: calc(100% + 3.2rem);
-  background-color: rgba(224, 183, 111, 0.45);
 }
