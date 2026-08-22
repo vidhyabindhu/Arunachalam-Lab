@@ -200,17 +200,18 @@ button { font: inherit; }
   .statement, .research-section, .publications-section, .people-section, .news-section, .approach-section, .join-section { padding-top: 5.5rem; padding-bottom: 5.5rem; }
   .people-placeholder { min-height: 360px; }
 }
-/* ===== HERO FINAL LAYOUT ===== */
+
+/* ===== HERO CLEAN LAYOUT ===== */
 
 .hero {
   width: 100%;
-  max-width: 1600px;
+  max-width: 1450px;
   margin: 0 auto;
-  padding: 3.5rem 2.5rem 4.5rem;
+  padding: 3rem 2rem 4rem;
 
   display: grid;
-  grid-template-columns: minmax(420px, 0.9fr) minmax(600px, 1.25fr);
-  gap: 2.5rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
   align-items: center;
 }
 
@@ -223,50 +224,37 @@ button { font: inherit; }
 .hero-visual {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: center;
+
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  min-height: 0 !important;
 }
 
 .hero-visual-image {
   width: 100%;
-  max-width: 760px;
+  max-width: 620px;
   height: auto;
   display: block;
-  border-radius: 18px;
+  border-radius: 16px;
+  object-fit: contain;
 }
 
-/* Tablets / smaller screens */
-
-@media (max-width: 1100px) {
-  .hero {
-    grid-template-columns: 1fr 1.15fr;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .hero-copy {
-    max-width: 540px;
-  }
-}
-
-/* Phones */
-
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
+    gap: 2rem;
     padding: 2.5rem 1.25rem 3rem;
-    gap: 2.5rem;
   }
 
   .hero-copy {
     max-width: 650px;
   }
 
-  .hero-visual {
-    justify-content: center;
-  }
-
   .hero-visual-image {
-    max-width: 700px;
+    max-width: 650px;
   }
 }
