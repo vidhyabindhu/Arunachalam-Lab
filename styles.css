@@ -134,7 +134,7 @@ button { font: inherit; }
 .approach-inner { display: grid; grid-template-columns: .8fr 1.2fr; gap: 9vw; }
 .approach-copy > p:last-child { color: rgba(255,255,255,.65); font-size: 1.05rem; line-height: 1.8; max-width: 530px; }
 .section-kicker.light { color: #e0b76f; }
-.approach-list > div { display: grid; grid-template-columns: 45px 1fr; gap: 1rem; padding: 1.6rem 0; border-top: 1px solid rgba(255,255,255,.16); }
+.approach-list > div { display: grid; grid-template-columns: 45px 1fr; gap: 1rem; padding: 1.6rem 0; border-top: 1px solid rgba(255,255,255,.16); align-items: baseline;}
 .approach-list > div:last-child { border-bottom: 1px solid rgba(255,255,255,.16); }
 .approach-list span { 
   color: #e0b76f; 
@@ -360,8 +360,6 @@ button { font: inherit; }
   color: #e0b76f;
   font-size: 1.25rem;
   font-weight: 700;
-  line-height: 1;
+  line-height: normal;
   letter-spacing: 0;
-  align-self: start;
-  transform: translateY(4.5px);
 }
