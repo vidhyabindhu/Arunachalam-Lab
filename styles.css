@@ -356,10 +356,25 @@ button { font: inherit; }
   object-fit: contain;
 }
 
-.approach-list > div > span {
-  color: #e0b76f;
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 0;
+.approach-list > div {
+  position: relative;
+}
+
+.approach-node {
+  width: 10px;
+  height: 10px;
+  background: #e0b76f;
+  border-radius: 50%;
+  display: block;
+  align-self: baseline;
+}
+
+.approach-list > div:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: calc(1.6rem + 10px);
+  bottom: -1.6rem;
+  width: 1px;
+  background: rgba(224, 183, 111, 0.45);
 }
