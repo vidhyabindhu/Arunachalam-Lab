@@ -69,7 +69,7 @@ button { font: inherit; }
 .hero h1 { max-width: 760px; margin: 0; font: 500 clamp(3.5rem, 6vw, 6.8rem)/0.96 "Manrope", sans-serif; letter-spacing: -0.055em; }
 .hero h1 em { color: var(--gold-deep); font-style: normal; }
 .hero-lede { max-width: 680px; margin: 2rem 0 0; color: var(--ink-soft); font-size: clamp(1.05rem, 1.3vw, 1.27rem); line-height: 1.7; }
-.hero-actions { display: flex; align-items: center; gap: 1.6rem; margin-top: 2.5rem; }
+.hero-actions { display: flex; align-items: center; gap: 1.6rem; margin-top: 2rem; }
 .button { display: inline-flex; gap: 1.5rem; align-items: center; justify-content: center; width: fit-content; padding: 0.95rem 1.25rem; border-radius: 999px; font-size: 0.9rem; font-weight: 600; }
 .button-primary { background: var(--ink); color: var(--white); }
 .button-outline { border: 1px solid var(--ink); }
@@ -246,8 +246,8 @@ button { font: inherit; }
 }
 
 .hero-lede {
-  max-width: 630px;
-  margin-top: 2rem;
+  max-width: 600px;
+  margin-top: 1.6rem;
 }
 
 
