@@ -212,8 +212,8 @@ button { font: inherit; }
   padding: 4rem 4vw 5rem;
 
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: 2.5rem;
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  gap: 1rem;
   align-items: center;
 
   background: var(--paper);
@@ -225,8 +225,6 @@ button { font: inherit; }
 .hero-copy {
   width: 100%;
   max-width: 650px;
-
-  /* IMPORTANT: removes the large padding from the original hero */
   padding: 0;
 
   display: flex;
@@ -236,18 +234,16 @@ button { font: inherit; }
   justify-self: start;
 }
 
-
 .hero-copy h1 {
   max-width: 650px;
   margin: 0;
 
   font-family: "Manrope", sans-serif;
   font-weight: 500;
-  font-size: clamp(3.5rem, 4.5vw, 5.2rem);
+  font-size: clamp(3.3rem, 4.1vw, 4.8rem);
   line-height: 1;
   letter-spacing: -0.05em;
 }
-
 
 .hero-lede {
   max-width: 610px;
@@ -259,7 +255,6 @@ button { font: inherit; }
 
 .hero-visual {
   width: 100%;
-
   min-height: 0;
   padding: 0;
 
@@ -273,8 +268,10 @@ button { font: inherit; }
   background: transparent;
   border: 0;
   box-shadow: none;
-}
 
+  /* Pull infographic toward headline and slightly upward */
+  transform: translate(-20px, -20px);
+}
 
 .hero-visual::before,
 .hero-visual::after {
@@ -282,16 +279,32 @@ button { font: inherit; }
   content: none;
 }
 
-
 .hero-visual-image {
   display: block;
 
   width: 100%;
-  max-width: 650px;
+  max-width: 710px;
   height: auto;
 
   object-fit: contain;
   border-radius: 8px;
+
+  /* Blend left edge of dark infographic into cream background */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.45) 4%,
+    black 11%,
+    black 100%
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.45) 4%,
+    black 11%,
+    black 100%
+  );
 }
 
 
@@ -318,10 +331,15 @@ button { font: inherit; }
   .hero-visual {
     min-height: 0;
     justify-content: center;
+    transform: none;
   }
 
   .hero-visual-image {
     max-width: 700px;
+
+    /* Don't fade the image on narrow screens */
+    -webkit-mask-image: none;
+    mask-image: none;
   }
 }
 
@@ -339,5 +357,4 @@ button { font: inherit; }
   .hero-copy h1 {
     font-size: clamp(2.8rem, 13vw, 4.2rem);
   }
-
 }
