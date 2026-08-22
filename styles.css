@@ -356,25 +356,36 @@ button { font: inherit; }
   object-fit: contain;
 }
 
+/* Connected approach pathway */
+
 .approach-list > div {
   position: relative;
+  align-items: baseline;
 }
 
-.approach-node {
-  width: 10px;
-  height: 10px;
-  background: #e0b76f;
-  border-radius: 50%;
+.approach-list .approach-node {
   display: block;
-  align-self: baseline;
+  width: 12px;
+  height: 12px;
+  min-width: 12px;
+  min-height: 12px;
+  border-radius: 50%;
+  background-color: #e0b76f;
+  justify-self: start;
+  align-self: start;
+  margin-top: 5px;
+  padding: 0;
+  font-size: 0;
+  letter-spacing: 0;
 }
 
-.approach-list > div:not(:last-child)::after {
+/* connecting line between nodes */
+.approach-list > div:not(:last-child) .approach-node::after {
   content: "";
   position: absolute;
-  left: 4px;
-  top: calc(1.6rem + 10px);
-  bottom: -1.6rem;
+  left: 5.5px;
+  top: 12px;
   width: 1px;
-  background: rgba(224, 183, 111, 0.45);
+  height: calc(100% + 3.2rem);
+  background-color: rgba(224, 183, 111, 0.45);
 }
