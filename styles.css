@@ -212,8 +212,8 @@ button { font: inherit; }
   padding: 4rem 4vw 5rem;
 
   display: grid;
-  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
-  gap: 1rem;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: 0.5rem;
   align-items: center;
 
   background: var(--paper);
@@ -282,7 +282,7 @@ button { font: inherit; }
 .hero-visual-image {
   display: block;
   width: 100%;
-  max-width: 720px;
+  max-width: 800px;
   height: auto;
 
   object-fit: contain;
