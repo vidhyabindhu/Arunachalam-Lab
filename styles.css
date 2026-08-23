@@ -215,6 +215,7 @@ button { font: inherit; }
   background: var(--line);
   border: 1px solid var(--line);
   scroll-behavior: smooth;
+  transition: transform 350ms ease;
 }
 
 .news-grid article {
