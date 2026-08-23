@@ -212,7 +212,7 @@ button { font: inherit; }
 
 .news-grid {
   display: flex;
-  width: calc(100% * 10 / 3);
+  width: 333.333333%;
   gap: 0;
   transition: transform 350ms ease;
   will-change: transform;
@@ -224,13 +224,7 @@ button { font: inherit; }
   min-height: 260px;
   padding: 1.5rem;
   background: var(--paper-2);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  border-right: 1px solid var(--line);
-}
-
-.news-grid article:first-child {
-  border-left: 1px solid var(--line);
+  border: 1px solid var(--line);
 }
 
 .news-grid time {
