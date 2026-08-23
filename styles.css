@@ -162,12 +162,85 @@ button { font: inherit; }
 .people-copy { padding: clamp(3rem,6vw,6rem); align-self: center; }
 .people-copy > p:not(.section-kicker) { color: var(--ink-soft); line-height: 1.8; margin: 1.5rem 0 2rem; }
 
-.news-section { border-top: 1px solid var(--line); }
-.news-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
-.news-grid article { background: var(--paper-2); padding: 1.5rem; min-height: 260px; }
-.news-grid time { color: var(--gold-deep); font-size: .7rem; font-weight: 700; letter-spacing: .14em; }
-.news-grid h3 { margin: 2rem 0 1rem; font: 600 1.4rem/1.2 "Manrope",sans-serif; }
-.news-grid p { color: var(--ink-soft); line-height: 1.65; }
+/* ===== NEWS CAROUSEL ===== */
+
+.news-section {
+  border-top: 1px solid var(--line);
+}
+
+.news-heading {
+  grid-template-columns: 1fr auto;
+  align-items: end;
+}
+
+.news-controls {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: flex-end;
+}
+
+.news-arrow {
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  font-size: 1.15rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 180ms ease, color 180ms ease, opacity 180ms ease;
+}
+
+.news-arrow:hover {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.news-arrow:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.news-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.news-grid {
+  display: flex;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  scroll-behavior: smooth;
+}
+
+.news-grid article {
+  flex: 0 0 calc((100% - 2px) / 3);
+  min-width: 0;
+  min-height: 260px;
+  padding: 1.5rem;
+  background: var(--paper-2);
+}
+
+.news-grid time {
+  color: var(--gold-deep);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+}
+
+.news-grid h3 {
+  margin: 2rem 0 1rem;
+  font: 600 1.4rem/1.2 "Manrope", sans-serif;
+}
+
+.news-grid p {
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
 
 .join-section { background: var(--blue); color: var(--white); padding: 8rem 0; }
 .join-inner { max-width: 900px; margin-left: max(5vw, calc((100vw - var(--max))/2)); }
@@ -364,4 +437,14 @@ button { font: inherit; }
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0;
+}
+
+@media (max-width: 950px) {
+  .news-heading {
+    grid-template-columns: 1fr auto;
+  }
+
+  .news-grid article {
+    flex-basis: 100%;
+  }
 }
