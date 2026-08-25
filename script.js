@@ -19,6 +19,7 @@ const newsNext = document.querySelector('.news-next');
 
 if (newsGrid && newsPrev && newsNext) {
   const cards = Array.from(newsGrid.querySelectorAll('article'));
+  const cardCount = cards.length;
   let currentIndex = 0;
 
   function getVisibleCards() {
@@ -26,20 +27,29 @@ if (newsGrid && newsPrev && newsNext) {
   }
 
   function updateNewsCarousel() {
-    const visibleCards = getVisibleCards();
-    const maxIndex = Math.max(0, cards.length - visibleCards);
+  const visibleCards = getVisibleCards();
+  const maxIndex = Math.max(0, cardCount - visibleCards);
 
-    currentIndex = Math.min(currentIndex, maxIndex);
+  currentIndex = Math.min(currentIndex, maxIndex);
 
-    const cardWidth = cards[0].getBoundingClientRect().width;
-    const gap = 1;
+  // Make the track wide enough to physically contain every card
+  newsGrid.style.width =
+    `${(cardCount / visibleCards) * 100}%`;
 
-    newsGrid.style.transform =
-      `translateX(-${currentIndex * (cardWidth + gap)}px)`;
+  // Give every card exactly one slot in that track
+  cards.forEach((card) => {
+    card.style.flex =
+      `0 0 ${100 / cardCount}%`;
+  });
 
-    newsPrev.disabled = currentIndex === 0;
-    newsNext.disabled = currentIndex >= maxIndex;
-  }
+  const cardWidth = cards[0].getBoundingClientRect().width;
+
+  newsGrid.style.transform =
+    `translateX(-${currentIndex * cardWidth}px)`;
+
+  newsPrev.disabled = currentIndex === 0;
+  newsNext.disabled = currentIndex >= maxIndex;
+}
 
   newsNext.addEventListener('click', () => {
     const visibleCards = getVisibleCards();
