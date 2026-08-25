@@ -212,14 +212,12 @@ button { font: inherit; }
 
 .news-grid {
   display: flex;
-  width: 333.333333%;
   gap: 0;
   transition: transform 350ms ease;
   will-change: transform;
 }
 
 .news-grid article {
-  flex: 0 0 10%;
   min-width: 0;
   min-height: 260px;
   padding: 1.5rem;
